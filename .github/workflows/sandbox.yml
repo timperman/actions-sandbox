@@ -12,5 +12,5 @@ jobs:
       with:
         files: 'manifest.yml'
       env:
-        SECRET: shh
+        name: probot-review-app
     - run: cat manifest.yml
