@@ -1,0 +1,7 @@
+---
+applications:
+- name: app
+  docker:
+    image: app:latest
+  env:
+    SECRET: $SECRET
