@@ -1,0 +1,16 @@
+name: Test substitution
+
+on: [push]
+
+jobs:
+  build-and-deploy-review-app:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Substitute variables in manifest files
+      uses: microsoft/variable-substitution@v1 
+      with:
+        files: 'manifest.yml'
+      env:
+        SECRET: shh
+    - run: cat manifest.yml
